@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/AppAngular",
+    "site": "niconfig",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
