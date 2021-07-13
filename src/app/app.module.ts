@@ -12,12 +12,15 @@ import { LoginComponent } from './login/login.component';
 import { MatCardModule} from '@angular/material/card';
 import { MatInputModule} from '@angular/material/input';
 import { MatButtonModule} from '@angular/material/button';
+import { RegistrousuarioComponent } from './registrousuario/registrousuario.component';
+import { MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrousuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

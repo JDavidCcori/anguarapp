@@ -24,9 +24,23 @@ export class AutenticacionService {
        alert("USUARIO O CONTRASEÑA INCORRECTO");
      })
    }
+   //salir de la pagina
    async logout(){
      await this.afAuth.signOut();
      localStorage.removeItem('user');
      this.router.navigate(['login']);
+   }
+   //registrar usuario
+   registrar(email:string, password:string, repassword:string){
+     if(password!=repassword){
+       window.alert("las contraseñas no coinciden");
+     }else{
+       this.afAuth.createUserWithEmailAndPassword(email, password).then((result) => {
+         window.alert("Se ha registrado el usuario");
+         console.log(result.user)
+       }).catch((error) => {
+         window.alert(error.message);
+       });
+     }
    }
 }

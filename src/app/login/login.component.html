@@ -13,8 +13,8 @@
                 <mat-label>Clave: </mat-label>
                 <input type="password" matInput #userPwd required>
             </mat-form-field>
-            <button mat-button (click)="autservice.login(userEmail.value, userPwd.value)"> INGRESAR </button>
-            <button mat-button> CREAR CUENTA NUEVA</button>
+            <button mat-button (click)="autservice.login(userEmail.value, userPwd.value)">INGRESAR </button>
+            <button mat-button (click)="openDialog()">CREAR CUENTA NUEVA</button>
         </div>
     </mat-card-content>
 </mat-card>
