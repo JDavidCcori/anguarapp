@@ -35,6 +35,7 @@ export class AutenticacionService {
      if(password!=repassword){
        window.alert("las contraseñas no coinciden");
      }else{
+       //salir del registro, una ves registrado
        this.afAuth.createUserWithEmailAndPassword(email, password).then((result) => {
          window.alert("Se ha registrado el usuario");
          console.log(result.user)

@@ -9,8 +9,6 @@ import { AutenticacionService} from '../servicios/autenticacion.service';
 export class RegistrousuarioComponent implements OnInit {
 
   constructor(public autservice: AutenticacionService) { }
-
   ngOnInit(): void {
   }
-
 }
