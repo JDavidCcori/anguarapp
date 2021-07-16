@@ -1,26 +1,27 @@
 <mat-card class="register-box">
-    <mat-card-header>
-        <mat-card-title>REGISTRO DE DATOS</mat-card-title>
-        <mat-card-subtitle>Registro de datos</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <div>
-            <mat-form-field class="caja">
-                <mat-label>Email: </mat-label>
-                <input type="email" matInput placeholder="pat@example.com" #userEmail required>
-            </mat-form-field>
-            <mat-form-field class="caja">
-                <mat-label>Clave: </mat-label>
-                <input type="password" matInput required #pass>
-            </mat-form-field>
-            <mat-form-field class="caja">
-                <mat-label>Vuelva a escribir su clave: </mat-label>
-                <input type="password" matInput required #pass1>
-            </mat-form-field>
-        </div>
-    </mat-card-content>
-    <mat-card-actions align="end">
-        <button mat-reised-button (click)="autservice.registrar(userEmail.value, pass.value, pass1.value)" color="primary">Guardar</button>
-        <button mat-reised-button color="primary">Nuevo</button>
-    </mat-card-actions>
+  <mat-card-header>
+    <mat-card-title>REGISTRO DE DATOS</mat-card-title>
+    <mat-card-subtitle>Registro de datos</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup] = "userForm" >
+      <mat-form-field  class="caja">
+        <mat-label>Email: </mat-label>
+        <input type="email" matInput formControlName="email" placeholder="pat@example.com" #userEmail required>
+      </mat-form-field>
+      <mat-form-field class="caja">
+        <mat-label>Clave: </mat-label>
+        <input type="password" formControlName="pwd" matInput required #pass>
+      </mat-form-field>
+      <mat-form-field class="caja">
+        <mat-label>Vuelva a escribir su clave: </mat-label>
+        <input type="password" formControlName="pwd2" matInput required #pass1>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-reised-button [mat-dialog-close]="true" (click)="autservice.registrar(userEmail.value, pass.value, pass1.value)" color="primary">Guardar</button>
+    <button mat-reised-button color="primary" (click)="limpiarForm()">Nuevo</button>
+    <button mat-reised-button color="primary" (click)="closeDialog()">Cancelar</button>
+  </mat-card-actions>
 </mat-card>

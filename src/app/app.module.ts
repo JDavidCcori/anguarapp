@@ -15,6 +15,13 @@ import { MatButtonModule} from '@angular/material/button';
 import { RegistrousuarioComponent } from './registrousuario/registrousuario.component';
 import { MatDialogModule} from '@angular/material/dialog';
 
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule} from '@angular/material/icon';
+import { MatMenuModule} from '@angular/material/menu';
+
+//Reactive forms
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +38,12 @@ import { MatDialogModule} from '@angular/material/dialog';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
