@@ -1,0 +1,19 @@
+table {
+ width: 100%;
+ }
+.mat-form-field {
+ font-size: 14px;
+ width: 100%;
+}
+
+td, th {
+ width: 10%;
+}
+
+.box{
+  margin: 20px auto;
+  max-width: 70%;
+}
+input{
+  outline: coral;
+}

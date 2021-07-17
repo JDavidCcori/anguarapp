@@ -15,15 +15,31 @@ import { MatButtonModule} from '@angular/material/button';
 import { RegistrousuarioComponent } from './registrousuario/registrousuario.component';
 import { MatDialogModule} from '@angular/material/dialog';
 
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule} from '@angular/material/icon';
+import { MatMenuModule} from '@angular/material/menu';
+
+import { MatSelectModule } from '@angular/material/select';
+
+import { MatTableModule } from '@angular/material/table'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
+
 //Reactive forms
 import { ReactiveFormsModule } from '@angular/forms';
+import { PersonaComponent } from './persona/persona/persona.component';
+import { ListarpersonasComponent } from './listarpersonas/listarpersonas.component';
+import { ActualizarComponent } from './persona/actualizar/actualizar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     LoginComponent,
-    RegistrousuarioComponent
+    RegistrousuarioComponent,
+    PersonaComponent,
+    ListarpersonasComponent,
+    ActualizarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +51,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSelectModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

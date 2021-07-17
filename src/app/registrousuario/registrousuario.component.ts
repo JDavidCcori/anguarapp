@@ -3,6 +3,10 @@ import { AutenticacionService} from '../servicios/autenticacion.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 
+//es ahí donde aparecen los nutricionistas
+//compartelo con algún fan de la madarina
+//Sobrevibe a tu examen "En tu día de pendiente, tómate una ecofresh y disfruta de tu ecofresh favorito"
+
 @Component({
   selector: 'app-registrousuario',
   templateUrl: './registrousuario.component.html',
@@ -10,8 +14,6 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class RegistrousuarioComponent implements OnInit {
   userForm: FormGroup | any;
-
-
 
   constructor(public autservice: AutenticacionService, public di: MatDialog) { }
 
@@ -26,7 +28,7 @@ export class RegistrousuarioComponent implements OnInit {
   }
 
   closeDialog(){
-    this.di.closeAll()
+    this.di.closeAll();
   }
 
   limpiarForm(){
@@ -34,5 +36,4 @@ export class RegistrousuarioComponent implements OnInit {
     this.userForm.controls['pwd'].setValue(null);
     this.userForm.controls['pwd2'].setValue(null);
   }
-
 }

@@ -1,0 +1,22 @@
+<form [formGroup]="this.form">
+  <mat-form-field class="caja">
+    <mat-label>DNI: </mat-label>
+    <input type="text" matInput formControlName="id" r equired [(ngModel)]="this.ps.seleccionado.id">
+  </mat-form-field>
+  <mat-form-field class="caja">
+    <mat-label>NOMBRES: </mat-label>
+    <input type="text" matInput formControlName="nombres" required required [(ngModel)]="this.ps.seleccionado.Nombres">
+  </mat-form-field>
+  <mat-form-field class="caja">
+    <mat-label>APELLIDOS: </mat-label>
+    <input type="text" matInput formControlName="apellidos" required required [(ngModel)]="this.ps.seleccionado.Apellidos">
+  </mat-form-field>
+  <mat-form-field class="caja">
+    <mat-label>Género</mat-label>
+    <mat-select formControlName="genero" required required [(ngModel)]="this.ps.seleccionado.Genero">
+      <mat-option value="Masculino">Masculino</mat-option>
+      <mat-option value="Femenino">Femenino</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
